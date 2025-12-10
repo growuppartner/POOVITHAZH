@@ -4,7 +4,11 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Poovithazh Fashion Academy</title>
+
+  <!-- Tailwind CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Brand Colors -->
   <style>
     :root {
       --brand-orange: #e48c34;
@@ -12,15 +16,27 @@
       --brand-light: #1e1e1e;
     }
   </style>
+
+  <!-- ✅ Favicon -->
+  <!-- Place a file named 'favicon.ico' or 'favicon.png' in your project root -->
+  <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+  <!-- Or, if using PNG: -->
+  <!-- <link rel="icon" type="image/png" href="/favicon.png" /> -->
+
+  <!-- Optional theme color for mobile browsers -->
+  <meta name="theme-color" content="#e48c34" />
 </head>
 
 <body class="bg-[color:var(--brand-dark)] text-gray-100 font-sans">
-
   <!-- Header -->
   <header class="bg-[color:var(--brand-light)] py-4 shadow-lg sticky top-0 z-50">
     <div class="max-w-6xl mx-auto flex justify-between items-center px-4">
       <div class="flex items-center space-x-3">
-        <img src="https://via.placeholder.com/70x70?text=Logo" alt="Poovithazh Logo" class="h-14 w-14 rounded-full border-2 border-[color:var(--brand-orange)] shadow-md">
+        <img
+          src="https://via.placeholder.com/70x70?text=Logo"
+          alt="Poovithazh Logo"
+          class="h-14 w-14 rounded-full border-2 border-[color:var(--brand-orange)] shadow-md"
+        />
         <h1 class="text-2xl md:text-3xl font-bold text-[color:var(--brand-orange)]">
           Poovithazh Fashion Academy
         </h1>
@@ -30,13 +46,17 @@
         <a href="#about" class="hover:text-[color:var(--brand-orange)] transition">About</a>
         <a href="#trust" class="hover:text-[color:var(--brand-orange)] transition">Trust</a>
         <a href="#contact" class="hover:text-[color:var(--brand-orange)] transition">Contact</a>
+        <!-- ✅ Login link -->
+        <a href="#login" class="hover:text-[color:var(--brand-orange)] transition">Login</a>
       </nav>
     </div>
   </header>
 
   <!-- Hero Section -->
   <section class="relative text-center py-20 px-6 bg-[color:var(--brand-dark)]">
-    <div class="absolute inset-0 opacity-20 bg-[url('https://via.placeholder.com/1600x800?text=Fashion+Backdrop')] bg-cover bg-center"></div>
+    <div
+      class="absolute inset-0 opacity-20 bg-[url('https://via.placeholder.com/1600x800?text=Fashion+Backdrop')] bg-cover bg-center"
+    ></div>
     <div class="relative z-10 max-w-5xl mx-auto">
       <h2 class="text-4xl md:text-5xl font-bold text-[color:var(--brand-orange)] mb-4">
         Born to Standout ✨
@@ -45,13 +65,38 @@
         Empowering creativity through fashion, design, and craftsmanship.
       </p>
 
-      <!-- Intro Video -->
-      <div class="relative max-w-3xl mx-auto mb-10">
-        <img src="https://via.placeholder.com/800x450?text=Intro+Video" alt="Intro Video" class="rounded-2xl shadow-xl w-full border border-gray-700">
-        <button class="absolute inset-0 flex items-center justify-center text-5xl text-white bg-black bg-opacity-40 hover:bg-opacity-60 transition rounded-2xl">▶</button>
+      <!-- ✅ Intro Video (replace src with your own video URL/file) -->
+      <div class="relative max-w-3xl mx-auto mb-10 rounded-2xl overflow-hidden shadow-xl border border-gray-700">
+        <!-- Local file example: put intro.mp4 in /public or root and update path -->
+        <video
+          class="w-full h-full"
+          controls
+          poster="https://via.placeholder.com/800x450?text=Poovithazh+Fashion+Intro"
+        >
+          <source src="/intro.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
       </div>
 
-      <a href="#enroll" class="inline-block bg-[color:var(--brand-orange)] hover:bg-orange-600 text-white font-semibold py-3 px-8 rounded-full shadow-lg transition">
+      <!-- Or use YouTube instead of the <video> tag above:
+      <div class="relative max-w-3xl mx-auto mb-10 rounded-2xl overflow-hidden shadow-xl border border-gray-700">
+        <div class="relative" style="padding-top: 56.25%;">
+          <iframe
+            class="absolute top-0 left-0 w-full h-full"
+            src="https://www.youtube.com/embed/VIDEO_ID"
+            title="Poovithazh Fashion Academy Intro Video"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+          ></iframe>
+        </div>
+      </div>
+      -->
+
+      <a
+        href="#enroll"
+        class="inline-block bg-[color:var(--brand-orange)] hover:bg-orange-600 text-white font-semibold py-3 px-8 rounded-full shadow-lg transition"
+      >
         Enroll Now
       </a>
     </div>
@@ -60,9 +105,14 @@
   <!-- About Section -->
   <section id="about" class="bg-[color:var(--brand-light)] py-16 px-4">
     <div class="max-w-5xl mx-auto text-center">
-      <h3 class="text-3xl font-bold text-[color:var(--brand-orange)] mb-6">About Poovithazh Fashion Academy</h3>
+      <h3 class="text-3xl font-bold text-[color:var(--brand-orange)] mb-6">
+        About Poovithazh Fashion Academy
+      </h3>
       <p class="text-gray-300 text-lg leading-relaxed">
-        Poovithazh Fashion Academy is dedicated to nurturing creativity and professional skills in fashion, design, and craft. Our courses combine traditional techniques with modern trends, ensuring students develop both artistic and technical expertise. With experienced instructors and hands-on training, we aim to empower aspiring entrepreneurs and enthusiasts to turn their passion into a thriving career.
+        Poovithazh Fashion Academy is dedicated to nurturing creativity and professional skills in fashion, design, and
+        craft. Our courses combine traditional techniques with modern trends, ensuring students develop both artistic
+        and technical expertise. With experienced instructors and hands-on training, we aim to empower aspiring
+        entrepreneurs and enthusiasts to turn their passion into a thriving career.
       </p>
     </div>
   </section>
@@ -72,27 +122,39 @@
     <div class="max-w-6xl mx-auto px-4 text-center">
       <h3 class="text-3xl font-bold text-[color:var(--brand-orange)] mb-10">Our Courses</h3>
       <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-        <div class="bg-[color:var(--brand-light)] rounded-xl shadow-lg p-6 border-t-4 border-[color:var(--brand-orange)] hover:shadow-xl transition text-left">
+        <div
+          class="bg-[color:var(--brand-light)] rounded-xl shadow-lg p-6 border-t-4 border-[color:var(--brand-orange)] hover:shadow-xl transition text-left"
+        >
           <h4 class="text-xl font-semibold mb-2">Tailoring</h4>
           <p class="text-gray-300 mb-1">Duration: 6 months</p>
           <p class="text-gray-200 text-sm">Master custom clothing, garment construction, and professional finishing.</p>
         </div>
-        <div class="bg-[color:var(--brand-light)] rounded-xl shadow-lg p-6 border-t-4 border-[color:var(--brand-orange)] hover:shadow-xl transition text-left">
+        <div
+          class="bg-[color:var(--brand-light)] rounded-xl shadow-lg p-6 border-t-4 border-[color:var(--brand-orange)] hover:shadow-xl transition text-left"
+        >
           <h4 class="text-xl font-semibold mb-2">Aari Embroidery</h4>
           <p class="text-gray-300 mb-1">Duration: 3 months</p>
-          <p class="text-gray-200 text-sm">Learn traditional embroidery art with intricate patterns and beadwork.</p>
+          <p class="text-gray-200 text-sm">
+            Learn traditional embroidery art with intricate patterns and beadwork.
+          </p>
         </div>
-        <div class="bg-[color:var(--brand-light)] rounded-xl shadow-lg p-6 border-t-4 border-[color:var(--brand-orange)] hover:shadow-xl transition text-left">
+        <div
+          class="bg-[color:var(--brand-light)] rounded-xl shadow-lg p-6 border-t-4 border-[color:var(--brand-orange)] hover:shadow-xl transition text-left"
+        >
           <h4 class="text-xl font-semibold mb-2">Cake Making</h4>
           <p class="text-gray-300 mb-1">Duration: 3 months</p>
           <p class="text-gray-200 text-sm">Explore baking artistry and decorate cakes like a professional chef.</p>
         </div>
-        <div class="bg-[color:var(--brand-light)] rounded-xl shadow-lg p-6 border-t-4 border-[color:var(--brand-orange)] hover:shadow-xl transition text-left">
+        <div
+          class="bg-[color:var(--brand-light)] rounded-xl shadow-lg p-6 border-t-4 border-[color:var(--brand-orange)] hover:shadow-xl transition text-left"
+        >
           <h4 class="text-xl font-semibold mb-2">Jewelry Making</h4>
           <p class="text-gray-300 mb-1">Duration: 1 month</p>
           <p class="text-gray-200 text-sm">Design and craft stunning jewelry pieces by hand.</p>
         </div>
-        <div class="bg-[color:var(--brand-light)] rounded-xl shadow-lg p-6 border-t-4 border-[color:var(--brand-orange)] hover:shadow-xl transition text-left">
+        <div
+          class="bg-[color:var(--brand-light)] rounded-xl shadow-lg p-6 border-t-4 border-[color:var(--brand-orange)] hover:shadow-xl transition text-left"
+        >
           <h4 class="text-xl font-semibold mb-2">Handmade Woolen Crafts</h4>
           <p class="text-gray-300 mb-1">Duration: 1 month</p>
           <p class="text-gray-200 text-sm">Create elegant woolen crafts for fashion and home decor.</p>
@@ -101,49 +163,78 @@
     </div>
   </section>
 
- <!-- Trust/Reviews Section -->
-<section id="trust" class="bg-[color:var(--brand-light)] py-16 px-4">
-  <div class="max-w-5xl mx-auto text-center">
-    <h3 class="text-3xl font-bold text-[color:var(--brand-orange)] mb-8">Trusted By Our Students</h3>
-    <div class="flex flex-col md:flex-row justify-center items-center gap-8 mb-10">
-      <div class="bg-[color:var(--brand-dark)] rounded-xl shadow-lg p-6 max-w-xs">
-        <p class="text-gray-200 text-sm mb-2">"The tailoring course helped me start my own boutique! Highly recommended."</p>
-        <p class="font-semibold text-[color:var(--brand-orange)]">- Priya S.</p>
+  <!-- Trust/Reviews Section -->
+  <section id="trust" class="bg-[color:var(--brand-light)] py-16 px-4">
+    <div class="max-w-5xl mx-auto text-center">
+      <h3 class="text-3xl font-bold text-[color:var(--brand-orange)] mb-8">Trusted By Our Students</h3>
+      <div class="flex flex-col md:flex-row justify-center items-center gap-8 mb-10">
+        <div class="bg-[color:var(--brand-dark)] rounded-xl shadow-lg p-6 max-w-xs">
+          <p class="text-gray-200 text-sm mb-2">
+            "The tailoring course helped me start my own boutique! Highly recommended."
+          </p>
+          <p class="font-semibold text-[color:var(--brand-orange)]">- Priya S.</p>
+        </div>
+        <div class="bg-[color:var(--brand-dark)] rounded-xl shadow-lg p-6 max-w-xs">
+          <p class="text-gray-200 text-sm mb-2">
+            "Amazing instructors and hands-on training. I learned jewelry making from scratch."
+          </p>
+          <p class="font-semibold text-[color:var(--brand-orange)]">- Arun K.</p>
+        </div>
+        <div class="bg-[color:var(--brand-dark)] rounded-xl shadow-lg p-6 max-w-xs">
+          <p class="text-gray-200 text-sm mb-2">
+            "Poovithazh Academy gave me confidence to pursue my dream in fashion design."
+          </p>
+          <p class="font-semibold text-[color:var(--brand-orange)]">- Nithya L.</p>
+        </div>
       </div>
-      <div class="bg-[color:var(--brand-dark)] rounded-xl shadow-lg p-6 max-w-xs">
-        <p class="text-gray-200 text-sm mb-2">"Amazing instructors and hands-on training. I learned jewelry making from scratch."</p>
-        <p class="font-semibold text-[color:var(--brand-orange)]">- Arun K.</p>
-      </div>
-      <div class="bg-[color:var(--brand-dark)] rounded-xl shadow-lg p-6 max-w-xs">
-        <p class="text-gray-200 text-sm mb-2">"Poovithazh Academy gave me confidence to pursue my dream in fashion design."</p>
-        <p class="font-semibold text-[color:var(--brand-orange)]">- Nithya L.</p>
+
+      <!-- Trustpilot & Google Reviews Logos -->
+      <div class="flex flex-col md:flex-row justify-center items-center gap-6">
+        <div class="flex items-center gap-3 bg-[color:var(--brand-dark)] p-4 rounded-xl shadow-lg">
+          <img
+            src="https://via.placeholder.com/100x30?text=Trustpilot"
+            alt="Trustpilot Logo"
+            class="h-8"
+          />
+          <span class="text-yellow-400 font-bold text-lg">4.8 ★★★★★</span>
+        </div>
+        <div class="flex items-center gap-3 bg-[color:var(--brand-dark)] p-4 rounded-xl shadow-lg">
+          <img
+            src="https://via.placeholder.com/100x30?text=Google+Reviews"
+            alt="Google Reviews Logo"
+            class="h-8"
+          />
+          <span class="text-yellow-400 font-bold text-lg">4.7 ★★★★★</span>
+        </div>
       </div>
     </div>
-
-    <!-- Trustpilot & Google Reviews Logos -->
-    <div class="flex flex-col md:flex-row justify-center items-center gap-6">
-      <div class="flex items-center gap-3 bg-[color:var(--brand-dark)] p-4 rounded-xl shadow-lg">
-        <img src="https://via.placeholder.com/100x30?text=Trustpilot" alt="Trustpilot Logo" class="h-8">
-        <span class="text-yellow-400 font-bold text-lg">4.8 ★★★★★</span>
-      </div>
-      <div class="flex items-center gap-3 bg-[color:var(--brand-dark)] p-4 rounded-xl shadow-lg">
-        <img src="https://via.placeholder.com/100x30?text=Google+Reviews" alt="Google Reviews Logo" class="h-8">
-        <span class="text-yellow-400 font-bold text-lg">4.7 ★★★★★</span>
-      </div>
-    </div>
-  </div>
-</section>
-
+  </section>
 
   <!-- Enroll Form -->
   <section id="enroll" class="bg-[color:var(--brand-dark)] py-16 px-4">
     <div class="max-w-3xl mx-auto text-center">
       <h3 class="text-3xl font-bold text-[color:var(--brand-orange)] mb-6">Enroll in Our Courses</h3>
-      <form class="bg-[color:var(--brand-light)] rounded-xl shadow-xl p-6 space-y-4 text-left border border-gray-700">
-        <input type="text" placeholder="Enter Your Full Name" class="w-full border border-gray-600 bg-transparent rounded-lg px-4 py-2 text-gray-200 focus:outline-none focus:ring-2 focus:ring-[color:var(--brand-orange)]">
-        <input type="email" placeholder="Enter Your Email Address" class="w-full border border-gray-600 bg-transparent rounded-lg px-4 py-2 text-gray-200 focus:outline-none focus:ring-2 focus:ring-[color:var(--brand-orange)]">
-        <input type="text" placeholder="Enter Your City" class="w-full border border-gray-600 bg-transparent rounded-lg px-4 py-2 text-gray-200 focus:outline-none focus:ring-2 focus:ring-[color:var(--brand-orange)]">
-        <select class="w-full border border-gray-600 bg-transparent rounded-lg px-4 py-2 text-gray-300 focus:outline-none focus:ring-2 focus:ring-[color:var(--brand-orange)]">
+      <form
+        class="bg-[color:var(--brand-light)] rounded-xl shadow-xl p-6 space-y-4 text-left border border-gray-700"
+      >
+        <input
+          type="text"
+          placeholder="Enter Your Full Name"
+          class="w-full border border-gray-600 bg-transparent rounded-lg px-4 py-2 text-gray-200 focus:outline-none focus:ring-2 focus:ring-[color:var(--brand-orange)]"
+        />
+        <input
+          type="email"
+          placeholder="Enter Your Email Address"
+          class="w-full border border-gray-600 bg-transparent rounded-lg px-4 py-2 text-gray-200 focus:outline-none focus:ring-2 focus:ring-[color:var(--brand-orange)]"
+        />
+        <input
+          type="text"
+          placeholder="Enter Your City"
+          class="w-full border border-gray-600 bg-transparent rounded-lg px-4 py-2 text-gray-200 focus:outline-none focus:ring-2 focus:ring-[color:var(--brand-orange)]"
+        />
+        <select
+          class="w-full border border-gray-600 bg-transparent rounded-lg px-4 py-2 text-gray-300 focus:outline-none focus:ring-2 focus:ring-[color:var(--brand-orange)]"
+        >
           <option class="bg-[color:var(--brand-dark)] text-gray-200">Select Course</option>
           <option>Tailoring - 6 months</option>
           <option>Aari Embroidery - 3 months</option>
@@ -151,7 +242,53 @@
           <option>Jewelry Making - 1 month</option>
           <option>Handmade Woolen Crafts - 1 month</option>
         </select>
-        <button type="submit" class="w-full bg-[color:var(--brand-orange)] hover:bg-orange-600 text-white font-semibold py-3 rounded-lg shadow-lg transition">Submit</button>
+        <button
+          type="submit"
+          class="w-full bg-[color:var(--brand-orange)] hover:bg-orange-600 text-white font-semibold py-3 rounded-lg shadow-lg transition"
+        >
+          Submit
+        </button>
+      </form>
+    </div>
+  </section>
+
+  <!-- ✅ Simple Login Section -->
+  <section id="login" class="bg-[color:var(--brand-light)] py-16 px-4">
+    <div class="max-w-md mx-auto text-center">
+      <h3 class="text-3xl font-bold text-[color:var(--brand-orange)] mb-4">Student Login</h3>
+      <p class="text-gray-300 mb-6 text-sm">
+        Log in to view your course materials, schedules, and updates.
+      </p>
+      <form
+        class="bg-[color:var(--brand-dark)] rounded-xl shadow-xl p-6 space-y-4 text-left border border-gray-700"
+      >
+        <div>
+          <label class="block text-gray-300 text-sm mb-1">Email</label>
+          <input
+            type="email"
+            placeholder="you@example.com"
+            class="w-full border border-gray-600 bg-transparent rounded-lg px-4 py-2 text-gray-200 focus:outline-none focus:ring-2 focus:ring-[color:var(--brand-orange)]"
+            required
+          />
+        </div>
+        <div>
+          <label class="block text-gray-300 text-sm mb-1">Password</label>
+          <input
+            type="password"
+            placeholder="Enter your password"
+            class="w-full border border-gray-600 bg-transparent rounded-lg px-4 py-2 text-gray-200 focus:outline-none focus:ring-2 focus:ring-[color:var(--brand-orange)]"
+            required
+          />
+        </div>
+        <button
+          type="submit"
+          class="w-full bg-[color:var(--brand-orange)] hover:bg-orange-600 text-white font-semibold py-3 rounded-lg shadow-lg transition"
+        >
+          Login
+        </button>
+        <p class="text-xs text-gray-400 mt-2 text-center">
+          * This is a demo login form. Connect it to your backend or Google/Email auth later.
+        </p>
       </form>
     </div>
   </section>
@@ -174,9 +311,5 @@
   <footer class="bg-[color:var(--brand-dark)] text-gray-400 text-center py-4 border-t border-gray-700">
     <p class="text-sm">© 2025 Poovithazh Fashion Academy | All Rights Reserved</p>
   </footer>
-
 </body>
 </html>
-
-
-
